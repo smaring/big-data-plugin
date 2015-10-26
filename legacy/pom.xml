@@ -23,6 +23,7 @@
     <url>scm:git:git@github.com:${github.user}/${project.artifactId}.git</url>
   </scm>
   <properties>
+    <publish-sonar-phase>verify</publish-sonar-phase>
     <common.version>3.3.0-v20070426</common.version>
     <httpcomponents.version>4.4</httpcomponents.version>
     <xstream.version>1.4.2</xstream.version>
@@ -188,12 +189,6 @@
       <version>${dependency.commons-configuration.revision}</version>
     </dependency>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${dependency.junit.revision}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-all</artifactId>
       <version>${dependency.mockito.revision}</version>
@@ -292,14 +287,5 @@
         </includes>
       </testResource>
     </testResources>
-    <plugins>
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>${plugin.org.apache.maven.plugins.maven-surefire-plugin.version}</version>
-        <configuration>
-          <testFailureIgnore>true</testFailureIgnore>
-        </configuration>
-      </plugin>
-    </plugins>
   </build>
 </project>

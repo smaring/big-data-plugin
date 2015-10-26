@@ -17,4 +17,7 @@
     <module>hdfs</module>
     <module>pig</module>
   </modules>
+  <properties>
+    <publish-sonar-phase/>
+  </properties>
 </project>

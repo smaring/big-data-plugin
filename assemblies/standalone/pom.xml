@@ -11,8 +11,7 @@
   <version>6.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
-    <publish-sonar-phase>site</publish-sonar-phase>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <publish-sonar-phase>verify</publish-sonar-phase>
     <dependency.karaf.revision>2.3.5</dependency.karaf.revision>
     <package.features>true</package.features>
     <pentaho-karaf-ee-assembly.version>${project.version}</pentaho-karaf-ee-assembly.version>

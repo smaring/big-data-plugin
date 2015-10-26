@@ -24,7 +24,7 @@
     <url>scm:git:git@github.com:${github.user}/${project.artifactId}.git</url>
   </scm>
   <properties>
-    <publish-sonar-phase>site</publish-sonar-phase>
+    <publish-sonar-phase>verify</publish-sonar-phase>
   </properties>
   <build>
     <plugins>

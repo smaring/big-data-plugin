@@ -14,7 +14,7 @@
   <description>a Pentaho open source project</description>
   <url>http://www.pentaho.com</url>
   <properties>
-    <publish-sonar-phase>site</publish-sonar-phase>
+    <publish-sonar-phase>verify</publish-sonar-phase>
   </properties>
   <dependencies>
     <dependency>
@@ -26,12 +26,6 @@
       <groupId>pentaho-kettle</groupId>
       <artifactId>kettle-core</artifactId>
       <version>${dependency.kettle.revision}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${dependency.junit.revision}</version>
       <scope>test</scope>
     </dependency>
     <dependency>

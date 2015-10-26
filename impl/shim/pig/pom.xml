@@ -14,7 +14,7 @@
   <description>a Pentaho open source project</description>
   <url>http://www.pentaho.com</url>
   <properties>
-    <publish-sonar-phase>site</publish-sonar-phase>
+    <publish-sonar-phase>verify</publish-sonar-phase>
   </properties>
   <dependencies>
     <dependency>
@@ -62,12 +62,6 @@
       <artifactId>pentaho-hadoop-shims-api</artifactId>
       <version>${dependency.hadoop-shims-api.revision}</version>
       <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${dependency.junit.revision}</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.mockito</groupId>

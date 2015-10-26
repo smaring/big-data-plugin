@@ -10,6 +10,9 @@
   <artifactId>pentaho-big-data-kettle-plugins</artifactId>
   <version>6.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <properties>
+    <publish-sonar-phase/>
+  </properties>
   <modules>
     <module>common</module>
     <module>pig</module>

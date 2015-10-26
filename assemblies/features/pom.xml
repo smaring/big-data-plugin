@@ -11,7 +11,7 @@
   <artifactId>pentaho-big-data-plugin-osgi</artifactId>
   <version>6.1-SNAPSHOT</version>
   <properties>
-    <publish-sonar-phase>site</publish-sonar-phase>
+    <publish-sonar-phase>verify</publish-sonar-phase>
   </properties>
   <build>
     <plugins>

@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.pentaho</groupId>
     <artifactId>pentaho-ce-jar-parent-pom</artifactId>
-    <version>1.0.14</version>
+    <version>1.1.0</version>
   </parent>
   <groupId>pentaho</groupId>
   <artifactId>pentaho-big-data-bundles</artifactId>
@@ -32,11 +32,12 @@
     <module>mapr-osgi-jaas</module>
   </modules>
   <scm>
-    <connection>scm:git:git@github.com:${github.user}/${project.artifactId}.git</connection>
-    <developerConnection>scm:git:git@github.com:${github.user}/${project.artifactId}.git</developerConnection>
-    <url>scm:git:git@github.com:${github.user}/${project.artifactId}.git</url>
+    <connection>scm:git:git@github.com:pentaho/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:git@github.com:pentaho/${project.artifactId}.git</developerConnection>
+    <url>scm:git:git@github.com:pentaho/${project.artifactId}.git</url>
   </scm>
   <properties>
+    <publish-sonar-phase/>
     <dependency.mockito.revision>1.9.5</dependency.mockito.revision>
     <plugin.org.codehaus.mojo.build-helper-maven-plugin.version>1.5
     </plugin.org.codehaus.mojo.build-helper-maven-plugin.version>
@@ -74,8 +75,6 @@
     <dependency.jackson.revision>1.5.2</dependency.jackson.revision>
     <dependency.libthrift.revision>0.6</dependency.libthrift.revision>
     <dependency.commands.revision>3.3.0-I20070605-0010</dependency.commands.revision>
-    <publish-sonar-phase></publish-sonar-phase>
-    <dependency.junit.revision>4.11</dependency.junit.revision>
     <dependency.pdi-osgi-bridge-core.revision>${project.version}</dependency.pdi-osgi-bridge-core.revision>
     <dependency.jline.revision>0.9.94</dependency.jline.revision>
     <dependency.pentaho-s3-vfs.revision>6.1-SNAPSHOT</dependency.pentaho-s3-vfs.revision>
@@ -91,61 +90,6 @@
   </properties>
   <build>
     <plugins>
-      <!-- remove this once it's in the parent pom -->
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>build-helper-maven-plugin</artifactId>
-        <version>${plugin.org.codehaus.mojo.build-helper-maven-plugin.version}</version>
-        <executions>
-          <execution>
-            <id>add-test-source</id>
-            <phase>generate-test-sources</phase>
-            <goals>
-              <goal>add-test-source</goal>
-            </goals>
-            <configuration>
-              <sources>
-                <source>src/it/java</source>
-              </sources>
-            </configuration>
-          </execution>
-          <execution>
-            <id>add-test-resource</id>
-            <phase>generate-test-resources</phase>
-            <goals>
-              <goal>add-test-resource</goal>
-            </goals>
-            <configuration>
-              <resources>
-                <resource>
-                  <directory>src/it/resources</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <!-- remove this once it's in the parent pom -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-failsafe-plugin</artifactId>
-        <version>${plugin.org.apache.maven.plugins.maven-failsafe-plugin.version}</version>
-        <executions>
-          <execution>
-            <id>integration-test</id>
-            <goals>
-              <goal>integration-test</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>verify</id>
-            <goals>
-              <goal>verify</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
